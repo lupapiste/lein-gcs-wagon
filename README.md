@@ -17,11 +17,11 @@ export GOOGLE_APPLICATION_CREDENTIALS="/path/to/my/credentials.json"
 
 Create the GCS bucket you are going to use and add the configuration in your application's project.clj:
 ```clojure
-:repositories [["snapshots" {:url "gs://my-bucket/snapshots"
-                               :no-auth true
-                               :sign-releases false}]
-               ["releases" {:url "gs://my-bucket/releases"
-                            :no-auth true
+:repositories [["snapshots" {:url           "gs://my-bucket/snapshots"
+                             :no-auth       true
+                             :sign-releases false}]
+               ["releases" {:url           "gs://my-bucket/releases"
+                            :no-auth       true
                             :sign-releases false}]]
 :plugins [[lupapiste/lein-gcs-wagon "1.1"]]
 ```
